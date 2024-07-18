@@ -1,5 +1,9 @@
 # typia x OpenAI
 
+
+https://github.com/user-attachments/assets/e72ead0c-46a4-439b-bb9a-4e7f52301bfc
+
+
 To install dependencies:
 
 ```bash
