@@ -1,4 +1,4 @@
-# bun-typia-template
+# typia x OpenAI
 
 To install dependencies:
 
@@ -6,21 +6,21 @@ To install dependencies:
 bun install
 ```
 
-To run:
+To run example:
 
 ```bash
-bun run index.ts
+export OPENAI_API_KEY=your_openai_api_key
+bun main
 ```
+The input text is in [`input.txt`](./input.txt)  
+Result JSON will be saved in [`result.json`](./result.json)
 
-To build:
+# Inspiration
 
-```bash
-bun build
-```
-
-This project was created using `bun init` in bun v1.1.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+This repository is inspired by an Japanese article [Zodスキーマでプロンプト生成を行い構造化データを自由自在に扱えて、LLMプロダクト開発が圧倒的に効率化した話](https://tech.algomatic.jp/entry/2024/05/23/140219)
 
 # Reference
 - [Bun](https://bun.sh)
 - [Typia](https://typia.io)
 - [unplugin-typia](https://jsr.io/@ryoppippi/unplugin-typia)
+- [my experiment with Zod](https://gist.github.com/ryoppippi/bf3c6ad2fce408fdcb0c65b706632c80)

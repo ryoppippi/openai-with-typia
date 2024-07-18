@@ -1,0 +1,42 @@
+{
+  "characters": [
+    {
+      "name": "フリーレン",
+      "age": 1000,
+      "attributes": [
+        "エルフ",
+        "魔法使い",
+        "長命"
+      ],
+      "personality": "ドライだが優しい面も持ち、他種族とのコミュニケーションが不器用。",
+      "stats": {
+        "strength": 12,
+        "intelligence": 18,
+        "dexterity": 15,
+        "agility": 14,
+        "luck": 10
+      },
+      "background": "魔王討伐の旅をした勇者パーティーのメンバーであり、大魔法使いフランメの弟子でもある。",
+      "magic": "多様な魔法を収集しているが、戦闘に役立たない魔法が多い"
+    },
+    {
+      "name": "シュタルク",
+      "age": 19,
+      "attributes": [
+        "戦士",
+        "斧使い",
+        "憶病"
+      ],
+      "personality": "極端に憶病で自己評価が低いが、実力は非常に高い。",
+      "stats": {
+        "strength": 15,
+        "intelligence": 10,
+        "dexterity": 12,
+        "agility": 11,
+        "luck": 9
+      },
+      "background": "中央諸国クレ地方の戦士の村に育ち、アイゼンの弟子として育った。",
+      "magic": null
+    }
+  ]
+}

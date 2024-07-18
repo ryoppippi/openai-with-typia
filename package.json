@@ -3,10 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch ./index.ts",
-    "start": "bun run ./index.ts",
-    "build": "bun run build.ts",
-    "run": "node ./out/index.js",
+    "main": "bun run ./src/index.ts",
     "prepare": "ts-patch install && typia patch"
   },
   "devDependencies": {
@@ -16,6 +13,7 @@
     "typescript": "~5.5.3"
   },
   "dependencies": {
+    "openai": "^4.52.7",
     "typia": "^6.5.1"
   }
 }
