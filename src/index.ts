@@ -49,7 +49,7 @@ const res = chat.choices.at(0)?.message.content;
 typia.assertGuard<string>(res)
 
 /** parse res as JSON */
-const json = typia.json.assertParse<Output>(res)
+const json = typia.json.validateParse<Output>(res)
 
 console.log(json)
 
