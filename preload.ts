@@ -3,7 +3,6 @@ import UnpluginTypia from '@ryoppippi/unplugin-typia/bun'
 
 plugin(
   UnpluginTypia({
-    cache: false,
     log: false,
   })
 )
