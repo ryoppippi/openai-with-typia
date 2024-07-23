@@ -45,11 +45,8 @@ ${OutputTypeRawText}
 
 const res = chat.choices.at(0)?.message.content;
 
-/** check if res is string */
-typia.assertGuard<string>(res)
-
 /** parse res as JSON */
-const json = typia.json.validateParse<Output>(res)
+const json = typia.json.validateParse<Output>(res as string)
 
 console.log(json)
 
