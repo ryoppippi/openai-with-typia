@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "openai": "^4.53.2",
-    "typia": "^6.6.1"
+    "typia": "^6.6.2"
   }
 }
