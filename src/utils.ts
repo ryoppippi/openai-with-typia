@@ -5,15 +5,14 @@ import type * as typia from "typia";
  * Converts a TypeScript type to OpenAI JSON Schema
  */
 export function typiaJsonToOpenAIJsonSchema(
-  json_schema: typia.IJsonApplication.IV3_1,
+  jsonSchema: typia.IJsonApplication.IV3_1,
+  strict?: boolean | null,
 ): ResponseFormatJSONSchema.JSONSchema {
-  const { schemas: _schemas } = json_schema.components;
+  const { schemas } = jsonSchema.components;
 
-  if (_schemas == null) {
+  if (schemas == null) {
     throw new Error("json_schema.components.schemas is null");
   }
-
-  const schemas = _schemas as Record<string, Record<string, unknown>>;
 
   const name = Object.keys(schemas).at(0);
 
@@ -21,17 +20,23 @@ export function typiaJsonToOpenAIJsonSchema(
     throw new Error("name is null");
   }
 
+  const targetSchema = schemas[name];
+
   return {
     name,
-    schema: schemas[name],
+    schema: targetSchema as Record<string, unknown>,
+    description: targetSchema.description,
+    strict,
   };
 }
 
+type Params = Parameters<typeof typiaJsonToOpenAIJsonSchema>;
+
 export function typiaJsonToOpenAIResponse(
-  json_schema: typia.IJsonApplication.IV3_1,
+  ...params: Params
 ): ResponseFormatJSONSchema {
   return {
     type: "json_schema",
-    json_schema: typiaJsonToOpenAIJsonSchema(json_schema),
+    json_schema: typiaJsonToOpenAIJsonSchema(...params),
   };
 }
