@@ -23,7 +23,7 @@ console.log("start chat");
 const chat = await client.chat.completions.create({
   stream: false,
   response_format: typiaJsonToOpenAIResponse(
-    typia.json.application<[Output], "3.1">(),
+    typia.json.application<[Output]>(),
   ),
   messages: [
     {
