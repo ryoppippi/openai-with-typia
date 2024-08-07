@@ -32,9 +32,7 @@ const chat = await client.chat.completions.create({
   messages: [
     {
       role: "system",
-      content: `
-${prompt}
-`,
+      content: prompt,
     },
     {
       role: "user",
