@@ -1,42 +1,48 @@
 {
-  "characters": [
-    {
-      "name": "フリーレン",
-      "age": 1000,
-      "attributes": [
-        "エルフ",
-        "魔法使い",
-        "長命"
-      ],
-      "personality": "ドライだが優しい面も持ち、他種族とのコミュニケーションが不器用。",
-      "stats": {
-        "strength": 12,
-        "intelligence": 18,
-        "dexterity": 15,
-        "agility": 14,
-        "luck": 10
+  "success": true,
+  "errors": [],
+  "data": {
+    "characters": [
+      {
+        "name": "フリーレン",
+        "age": 1000,
+        "attributes": [
+          "エルフ",
+          "長命",
+          "魔法使い",
+          "天才的資質"
+        ],
+        "personality": "ドライで厳しいが、優しく面倒見が良い",
+        "stats": {
+          "strength": 15,
+          "intelligence": 18,
+          "dexterity": 17,
+          "agility": 16,
+          "luck": 10
+        },
+        "background": "魔王を討伐した勇者パーティーの魔法使い。ヒンメルを探し続ける旅をしている。",
+        "magic": null
       },
-      "background": "魔王討伐の旅をした勇者パーティーのメンバーであり、大魔法使いフランメの弟子でもある。",
-      "magic": "多様な魔法を収集しているが、戦闘に役立たない魔法が多い"
-    },
-    {
-      "name": "シュタルク",
-      "age": 19,
-      "attributes": [
-        "戦士",
-        "斧使い",
-        "憶病"
-      ],
-      "personality": "極端に憶病で自己評価が低いが、実力は非常に高い。",
-      "stats": {
-        "strength": 15,
-        "intelligence": 10,
-        "dexterity": 12,
-        "agility": 11,
-        "luck": 9
-      },
-      "background": "中央諸国クレ地方の戦士の村に育ち、アイゼンの弟子として育った。",
-      "magic": null
-    }
-  ]
+      {
+        "name": "シュタルク",
+        "age": 19,
+        "attributes": [
+          "戦士",
+          "斧使い",
+          "極端に憶病",
+          "高い膂力"
+        ],
+        "personality": "自己評価が低く、女性の扱いが苦手だが、友情を大切にする",
+        "stats": {
+          "strength": 16,
+          "intelligence": 10,
+          "dexterity": 14,
+          "agility": 12,
+          "luck": 8
+        },
+        "background": "勇者パーティーの戦士アイゼンの弟子で、村から推薦されてフリーレンの仲間に。紅鏡竜を倒す力を持つ。",
+        "magic": null
+      }
+    ]
+  }
 }
