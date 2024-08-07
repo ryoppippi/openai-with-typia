@@ -1,5 +1,4 @@
-export type Output = 
-{
+export type Output = {
   characters: Array<{
     /** キャラクターの名前 */
     name: string;
@@ -26,5 +25,5 @@ export type Output =
     background: string;
     /** 使える魔法 */
     magic: string | null;
-  }>
-}
+  }>;
+};

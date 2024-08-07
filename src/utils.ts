@@ -1,30 +1,37 @@
-import type { ResponseFormatJSONSchema } from "openai/resources/shared.mjs"
-import typia, { type tags } from "typia"
+import type { ResponseFormatJSONSchema } from "openai/resources/shared.mjs";
+import type * as typia from "typia";
 
 /**
-* Converts a TypeScript type to OpenAI JSON Schema
-*/
-export function typiaJsonToOpenAIJsonSchema(json_schema: typia.IJsonApplication.IV3_1): ResponseFormatJSONSchema.JSONSchema{
+ * Converts a TypeScript type to OpenAI JSON Schema
+ */
+export function typiaJsonToOpenAIJsonSchema(
+  json_schema: typia.IJsonApplication.IV3_1,
+): ResponseFormatJSONSchema.JSONSchema {
+  const { schemas: _schemas } = json_schema.components;
 
-  if(json_schema.components.schemas == null){
-    throw new Error('json_schema.components.schemas is null')
+  if (_schemas == null) {
+    throw new Error("json_schema.components.schemas is null");
   }
 
-  const name = Object.keys(json_schema.components.schemas as Record<string,unknown>).at(0)
+  const schemas = _schemas as Record<string, Record<string, unknown>>;
 
+  const name = Object.keys(schemas).at(0);
 
-  typia.assertGuard<string>(name)
+  if (name == null) {
+    throw new Error("name is null");
+  }
 
   return {
     name,
-
-    schema: json_schema.components.schemas[name] as Record<string,unknown>,
-  }
+    schema: schemas[name],
+  };
 }
 
-export function typiaJsonToOpenAIResponse(json_schema: typia.IJsonApplication.IV3_1): ResponseFormatJSONSchema {
+export function typiaJsonToOpenAIResponse(
+  json_schema: typia.IJsonApplication.IV3_1,
+): ResponseFormatJSONSchema {
   return {
-    type: 'json_schema',
-    json_schema: typiaJsonToOpenAIJsonSchema(json_schema)
-  }
+    type: "json_schema",
+    json_schema: typiaJsonToOpenAIJsonSchema(json_schema),
+  };
 }
