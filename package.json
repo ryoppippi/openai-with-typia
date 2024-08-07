@@ -13,7 +13,7 @@
     "typescript": "~5.5.4"
   },
   "dependencies": {
-    "openai": "^4.54.0",
-    "typia": "^6.7.0"
+    "openai": "^4.55.1",
+    "typia": "^6.7.2"
   }
 }
