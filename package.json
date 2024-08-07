@@ -13,6 +13,7 @@
     "typescript": "~5.5.4"
   },
   "dependencies": {
+    "@ryoppippi/typiautil": "npm:@jsr/ryoppippi__typiautil",
     "openai": "^4.55.1",
     "typia": "^6.7.2"
   }

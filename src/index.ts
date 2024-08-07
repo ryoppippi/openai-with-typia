@@ -1,7 +1,7 @@
 import { join } from "node:path";
 import typia from "typia";
 import OpenAI from "openai";
-import { typiaJsonToOpenAIResponse } from "./utils";
+import { typiaJsonToOpenAIResponse } from "@ryoppippi/typiautil/openai";
 
 import type { Output } from "./type";
 
@@ -20,11 +20,11 @@ const prompt =
   `これから与えられるテキストを読み込み、その内容を解析し、formatにしたがって出力してください。 `;
 
 console.log("start chat");
+const jsonSchema = typia.json.application<[Output]>();
+
 const chat = await client.chat.completions.create({
   stream: false,
-  response_format: typiaJsonToOpenAIResponse(
-    typia.json.application<[Output]>(),
-  ),
+  response_format: typiaJsonToOpenAIResponse({ jsonSchema }),
   messages: [
     {
       role: "system",
