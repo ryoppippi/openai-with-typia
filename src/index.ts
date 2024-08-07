@@ -1,15 +1,15 @@
 import { join } from "node:path";
-import typia, { type tags } from "typia"
+import typia from "typia";
 import OpenAI from "openai";
+import { typiaJsonToOpenAIResponse } from "./utils";
 
-import type { Output } from "./type"
+import type { Output } from "./type";
 
 /** このfile からの相対パスから絶対パスを生成 */
 function relativePath(...path: string[]) {
   return join (import.meta.dirname, ...path)
 }
 
-const OutputTypeRawText = await Bun.file(relativePath('./type.ts')).text()
 const inputText = await Bun.file(relativePath('..', 'input.txt')).text()
 
 const client = new OpenAI({
@@ -26,13 +26,12 @@ formatはTypeScriptの型定義ですが、必ずJSONを出力してください
 console.log('start chat')
 const chat = await client.chat.completions.create({
   stream: false,
-  response_format: { type: "json_object" },
+  response_format: typiaJsonToOpenAIResponse(typia.json.application<[Output], "3.1">()),
   messages: [
     {
       role: "system",
       content: `
 ${prompt}
-${OutputTypeRawText}
 `,
     },
     {
@@ -41,7 +40,7 @@ ${OutputTypeRawText}
     },
   ],
   model: "gpt-4o-mini",
-});
+ });
 
 const res = chat.choices.at(0)?.message.content;
 

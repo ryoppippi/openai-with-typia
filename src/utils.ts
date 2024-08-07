@@ -4,7 +4,7 @@ import typia, { type tags } from "typia"
 /**
 * Converts a TypeScript type to OpenAI JSON Schema
 */
-export function typiaToOpenAIJsonSchema<T>(json_schema: typia.IJsonApplication.IV3_1): ResponseFormatJSONSchema.JSONSchema{
+export function typiaJsonToOpenAIJsonSchema(json_schema: typia.IJsonApplication.IV3_1): ResponseFormatJSONSchema.JSONSchema{
 
   if(json_schema.components.schemas == null){
     throw new Error('json_schema.components.schemas is null')
@@ -19,5 +19,12 @@ export function typiaToOpenAIJsonSchema<T>(json_schema: typia.IJsonApplication.I
     name,
 
     schema: json_schema.components.schemas[name] as Record<string,unknown>,
+  }
+}
+
+export function typiaJsonToOpenAIResponse(json_schema: typia.IJsonApplication.IV3_1): ResponseFormatJSONSchema {
+  return {
+    type: 'json_schema',
+    json_schema: typiaJsonToOpenAIJsonSchema(json_schema)
   }
 }
