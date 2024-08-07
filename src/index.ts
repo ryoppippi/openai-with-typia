@@ -16,7 +16,8 @@ const client = new OpenAI({
   apiKey: typia.assert<string>(process.env.OPENAI_API_KEY),
 });
 
-const prompt = `これから与えられるテキストを読み込み、その内容を解析し、formatにしたがって出力してください。 `;
+const prompt =
+  `これから与えられるテキストを読み込み、その内容を解析し、formatにしたがって出力してください。 `;
 
 console.log("start chat");
 const chat = await client.chat.completions.create({
