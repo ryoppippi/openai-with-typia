@@ -1,7 +1,7 @@
 import { join } from "node:path";
 import typia from "typia";
 import OpenAI from "openai";
-import { typiaJsonToOpenAIResponse } from "@ryoppippi/typiautil/openai";
+import { typiaResponseFormat } from "@ryoppippi/typiautil/openai";
 
 import type { Output } from "./type";
 
@@ -20,11 +20,13 @@ const prompt =
   `これから与えられるテキストを読み込み、その内容を解析し、formatにしたがって出力してください。 `;
 
 console.log("start chat");
-const jsonSchema = typia.json.application<[Output]>();
 
-const chat = await client.chat.completions.create({
+const chat = await client.beta.chat.completions.parse({
   stream: false,
-  response_format: typiaJsonToOpenAIResponse({ jsonSchema }),
+  response_format: typiaResponseFormat({
+    jsonSchema: typia.json.application<[Output]>(),
+    validate: typia.createValidate<Output>(),
+}),
   messages: [
     {
       role: "system",
@@ -38,10 +40,10 @@ const chat = await client.chat.completions.create({
   model: "gpt-4o-mini",
 });
 
-const res = chat.choices.at(0)?.message.content;
+const res = chat.choices.at(0)?.message.parsed
 
 /** parse res as JSON */
-const json = typia.json.validateParse<Output>(res as string);
+const json = typia.assert<Output>(res);
 
 console.log(json);
 
