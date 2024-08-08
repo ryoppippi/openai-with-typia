@@ -1,3 +1,4 @@
+/** キャラクターに関する情報 */
 export type Output = {
   characters: Array<{
     /** キャラクターの名前 */
