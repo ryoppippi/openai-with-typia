@@ -1,3 +1,5 @@
+import { zodResponseFormat } from "openai/helpers/zod";
+
 import { join } from "node:path";
 import { $ } from 'bun'
 import typia from "typia";
@@ -23,9 +25,6 @@ const prompt =
 console.log("start chat");
 
 const jsonSchema= typia.json.application<[Output]>();
-
-await $`echo ${JSON.stringify(jsonSchema, null, 2)} > schema.json`
-
 const chat = await client.beta.chat.completions.parse({
   stream: false,
   response_format: typiaResponseFormat({
@@ -52,4 +51,5 @@ const json = typia.assert<Output>(res);
 
 console.log(json);
 
+await $`echo ${JSON.stringify(jsonSchema, null, 2)} > schema.json`
 await $`echo ${JSON.stringify(json, null, 2)} > result.json`
