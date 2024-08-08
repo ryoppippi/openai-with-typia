@@ -1,4 +1,5 @@
 import { join } from "node:path";
+import { $ } from 'bun'
 import typia from "typia";
 import OpenAI from "openai";
 import { typiaResponseFormat } from "@ryoppippi/typiautil/openai";
@@ -21,10 +22,14 @@ const prompt =
 
 console.log("start chat");
 
+const jsonSchema= typia.json.application<[Output]>();
+
+await $`echo ${JSON.stringify(jsonSchema, null, 2)} > schema.json`
+
 const chat = await client.beta.chat.completions.parse({
   stream: false,
   response_format: typiaResponseFormat({
-    jsonSchema: typia.json.application<[Output]>(),
+    jsonSchema,
     validate: typia.createValidate<Output>(),
 }),
   messages: [
@@ -47,7 +52,4 @@ const json = typia.assert<Output>(res);
 
 console.log(json);
 
-await Bun.write(
-  Bun.file("./result.json"),
-  JSON.stringify(json, null, 2),
-);
+await $`echo ${JSON.stringify(json, null, 2)} > result.json`
