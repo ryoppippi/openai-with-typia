@@ -1,0 +1,105 @@
+{
+  "version": "3.1",
+  "components": {
+    "schemas": {
+      "Output": {
+        "type": "object",
+        "properties": {
+          "characters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "キャラクターの名前"
+                },
+                "age": {
+                  "type": "number",
+                  "description": "キャラクターの年齢"
+                },
+                "attributes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "キャラクターの属性"
+                },
+                "personality": {
+                  "type": "string",
+                  "description": "キャラクターの性格"
+                },
+                "stats": {
+                  "type": "object",
+                  "properties": {
+                    "strength": {
+                      "type": "number",
+                      "description": "筋力"
+                    },
+                    "intelligence": {
+                      "type": "number",
+                      "description": "知力"
+                    },
+                    "dexterity": {
+                      "type": "number",
+                      "description": "器用さ"
+                    },
+                    "agility": {
+                      "type": "number",
+                      "description": "素早さ"
+                    },
+                    "luck": {
+                      "type": "number",
+                      "description": "運"
+                    }
+                  },
+                  "required": [
+                    "strength",
+                    "intelligence",
+                    "dexterity",
+                    "agility",
+                    "luck"
+                  ],
+                  "description": "キャラクターの能力値を3-18で"
+                },
+                "background": {
+                  "type": "string",
+                  "description": "生い立ち"
+                },
+                "magic": {
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ],
+                  "description": "使える魔法"
+                }
+              },
+              "required": [
+                "name",
+                "age",
+                "attributes",
+                "personality",
+                "stats",
+                "background",
+                "magic"
+              ]
+            }
+          }
+        },
+        "required": [
+          "characters"
+        ],
+        "description": "キャラクターに関する情報"
+      }
+    }
+  },
+  "schemas": [
+    {
+      "$ref": "#/components/schemas/Output"
+    }
+  ]
+}
