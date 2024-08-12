@@ -1,5 +1,3 @@
-import { zodResponseFormat } from "openai/helpers/zod";
-
 import { join } from "node:path";
 import { $ } from 'bun'
 import typia from "typia";
