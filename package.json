@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@ryoppippi/typiautil": "npm:@jsr/ryoppippi__typiautil",
-    "openai": "^4.74.0",
+    "openai": "^4.75.0",
     "typia": "^7.0.1"
   }
 }
