@@ -10,7 +10,7 @@
     "@ryoppippi/unplugin-typia": "npm:@jsr/ryoppippi__unplugin-typia",
     "@types/bun": "latest",
     "ts-patch": "^3.3.0",
-    "typescript": "~5.7.2"
+    "typescript": "~5.7.3"
   },
   "dependencies": {
     "@ryoppippi/typiautil": "npm:@jsr/ryoppippi__typiautil",
