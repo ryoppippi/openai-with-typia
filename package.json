@@ -7,7 +7,7 @@
     "prepare": "ts-patch install && typia patch"
   },
   "devDependencies": {
-    "@ryoppippi/unplugin-typia": "npm:@jsr/ryoppippi__unplugin-typia",
+    "@ryoppippi/unplugin-typia": "^2.0.0",
     "@types/bun": "latest",
     "ts-patch": "^3.3.0",
     "typescript": "~5.8.2"
