@@ -6,7 +6,7 @@
       "dependencies": {
         "@ryoppippi/typiautil": "npm:@jsr/ryoppippi__typiautil",
         "openai": "^4.86.2",
-        "typia": "^8.0.0",
+        "typia": "^8.0.1",
       },
       "devDependencies": {
         "@ryoppippi/unplugin-typia": "^2.0.3",
