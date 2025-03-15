@@ -5,7 +5,7 @@
       "name": "bun-typia-template",
       "dependencies": {
         "@ryoppippi/typiautil": "npm:@jsr/ryoppippi__typiautil",
-        "openai": "^4.86.2",
+        "openai": "^4.87.3",
         "typia": "^8.0.1",
       },
       "devDependencies": {
