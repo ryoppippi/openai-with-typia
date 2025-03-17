@@ -6,7 +6,7 @@
       "dependencies": {
         "@ryoppippi/typiautil": "npm:@jsr/ryoppippi__typiautil",
         "openai": "^4.87.3",
-        "typia": "^8.0.1",
+        "typia": "^8.0.2",
       },
       "devDependencies": {
         "@ryoppippi/unplugin-typia": "^2.0.3",
@@ -285,7 +285,7 @@
 
     "typescript": ["typescript@5.8.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ=="],
 
-    "typia": ["typia@8.0.1", "", { "dependencies": { "@samchon/openapi": "^3.0.0", "commander": "^10.0.0", "comment-json": "^4.2.3", "inquirer": "^8.2.5", "package-manager-detector": "^0.2.0", "randexp": "^0.5.3" }, "peerDependencies": { "typescript": ">=4.8.0 <5.9.0" }, "bin": { "typia": "lib/executable/typia.js" } }, "sha512-g+oA+ayBP+yv2Cx+RdWR4V54CLL11lQCiwLWF5ux47kw0WHcuitrFNedcuo7NcPloAA26cPshShNcTs91Z0sDw=="],
+    "typia": ["typia@8.0.3", "", { "dependencies": { "@samchon/openapi": "^3.0.0", "commander": "^10.0.0", "comment-json": "^4.2.3", "inquirer": "^8.2.5", "package-manager-detector": "^0.2.0", "randexp": "^0.5.3" }, "peerDependencies": { "typescript": ">=4.8.0 <5.9.0" }, "bin": { "typia": "lib/executable/typia.js" } }, "sha512-DxveVaGPhkYojMRGMCuDpo4oy/h5XcF3GLE9TkfFfs2eMUSD602oNtXPYgSli6w7s87XHzD83eKPNljny8A8cA=="],
 
     "undici-types": ["undici-types@5.26.5", "", {}, "sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA=="],
 
