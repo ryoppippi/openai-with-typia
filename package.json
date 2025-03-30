@@ -15,6 +15,6 @@
   "dependencies": {
     "@ryoppippi/typiautil": "npm:@jsr/ryoppippi__typiautil",
     "openai": "^4.89.1",
-    "typia": "^8.0.3"
+    "typia": "^8.0.4"
   }
 }
