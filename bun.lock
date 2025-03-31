@@ -9,7 +9,7 @@
         "typia": "^8.0.4",
       },
       "devDependencies": {
-        "@ryoppippi/unplugin-typia": "^2.1.3",
+        "@ryoppippi/unplugin-typia": "^2.1.4",
         "@types/bun": "latest",
         "ts-patch": "^3.3.0",
         "typescript": "~5.8.2",
@@ -23,7 +23,7 @@
 
     "@ryoppippi/typiautil": ["@jsr/ryoppippi__typiautil@0.3.1", "https://npm.jsr.io/~/11/@jsr/ryoppippi__typiautil/0.3.1.tgz", { "dependencies": { "openai": "^4.55.1", "typia": "^6.7.2" } }, "sha512-YVZTMfA6BKc1rF0djCNU9J0ieRWCHRliAkcGcf8Na+94oG5jGwAYIk446EKtzOrigi5P6JkT7dkCW8u8rHancw=="],
 
-    "@ryoppippi/unplugin-typia": ["@ryoppippi/unplugin-typia@2.1.3", "", { "dependencies": { "@rollup/pluginutils": "^5.1.4", "consola": "^3.4.2", "defu": "^6.1.4", "diff-match-patch-es": "^1.0.1", "find-cache-dir": "^5.0.0", "magic-string": "^0.30.17", "pathe": "^2.0.3", "pkg-types": "^2.1.0", "type-fest": "^4.37.0", "unplugin": "^2.2.2" }, "peerDependencies": { "svelte": "^5.0.0", "typescript": ">=4.8.0 <5.9.0", "typia": ">=8.0.0 <9.0.0", "vite": ">=3.0.0" }, "optionalPeers": ["svelte", "vite"] }, "sha512-HO3RXkD78f0o6uR7ZWPtwjAjEV8Zne3cE4b/K76sb0+6KKhcQ+aw2UFmHzGcM9deztCj4ZkHOlF/26jYWi1xsw=="],
+    "@ryoppippi/unplugin-typia": ["@ryoppippi/unplugin-typia@2.1.4", "", { "dependencies": { "@rollup/pluginutils": "^5.1.4", "consola": "^3.4.2", "defu": "^6.1.4", "diff-match-patch-es": "^1.0.1", "find-cache-dir": "^5.0.0", "magic-string": "^0.30.17", "pathe": "^2.0.3", "pkg-types": "^2.1.0", "type-fest": "^4.37.0", "unplugin": "^2.2.2" }, "peerDependencies": { "svelte": "^5.25.2", "typescript": ">=4.8.0 <5.9.0", "typia": ">=8.0.0 <9.0.0", "vite": ">=3.0.0" }, "optionalPeers": ["svelte", "vite"] }, "sha512-pZtB5YhX0Egm4agc1gOn11IQiR4NnCmwvaea9kbwBImsCpR84gGayenzFDIJxkzv0U9iEBxZGUojuKnuzfpejg=="],
 
     "@samchon/openapi": ["@samchon/openapi@3.2.2", "", {}, "sha512-ij6qrXDj+uF2Jvz/DPAAQ929QGxAF0dYBL4b+41Y2iogZ8YUR/us9lklFmHYxYKWr450TShWDMCu0jSywUsITQ=="],
 
